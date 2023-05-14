@@ -1,0 +1,86 @@
+
+main{
+  margin-top: 80px;
+}
+
+.profile{
+margin: 0 auto 30px auto;
+padding: 10px;
+background-color: #ffffff;
+width: 70%;
+max-width: 700px;
+min-width: 250px;
+margin-top: 90px;
+display: flex;
+/* justify-content: center; */
+justify-content: space-between;
+border: #b4c7e7 7px solid;
+position: relative;
+}
+/* 
+.profile_icon_circle_1{
+position: absolute;
+top: 25%;
+left: 5%;
+display: inline-block;
+text-decoration: none;
+font-size: 35px;
+width:  100px;
+height: 100px;
+line-height: 55px;
+text-align: center;
+overflow: hidden;
+font-weight: bold;
+} */
+.profile_icon{
+  width: 40%;
+  /* background-color: tomato; */
+}
+
+
+.profile_icon div{
+  background-color: tomato;
+  margin: 0 auto;
+  width: 50%;
+  max-width: 150px;
+  border-radius: 50%;
+  border: solid 2px #b4c7e7;
+  /* position: absolute; */
+  /* top: 10%; */
+  /* left: 10%; */
+}
+
+.profile_icon div img{
+  width: 100%;
+}
+
+.profile_user{
+  padding: 20px;
+  width:70%;
+  /* text-align: center; */
+}
+.OtherUser_self_introduction{
+/* margin: 0 auto; */
+width: 100%;
+/* max-width: 300px; */
+/* min-width: 300px; */
+/* display: flex;
+flex-flow: column nowrap; */
+border: #b4c7e7 3px solid;
+}
+
+@media screen and (max-width: 480px) {
+  #header h1{
+    text-align: center;
+  }
+  .TimeTable{
+    margin: 0 auto;
+    width: 100%;
+    min-width: 300px;
+  }
+  table{
+    zoom: 50%;
+    border-collapse: collapse;
+    box-shadow: 10px 10px #333;
+  }
+}
