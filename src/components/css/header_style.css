@@ -1,0 +1,166 @@
+/* ヘッダー ============================= */
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  z-index: 100;
+  background-color: #386768;
+}
+
+
+header .header_content{
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #386768;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header_btn_Arrow{
+  width: 0.8em;
+  height: 0.8em;
+  border: 5px solid;
+  border-color:  transparent transparent #fff #fff;
+  transform: rotate(45deg);
+}
+
+h1{
+  /* color: #fff; */
+  color: #FFC000;
+}
+
+/* ↓ここからバーガーボタンのCSS↓ */
+/* https://www.asobou.co.jp/blog/web/css-menu */
+.menu-btn {
+  height: 60px;
+  width: 60px;
+  z-index: 90;
+  background-color: #386768;
+}
+
+.menu-btn {
+  /* position: fixed; */
+  top: 70px;
+  right: 40px;
+  display: flex;
+  height: 60px;
+  width: 60px;
+  justify-content: center;
+  align-items: center;
+  z-index: 90;
+}
+
+.menu-btn:hover{
+  box-sizing: border-box;
+  /* border: 3px solid #fff; */
+  border: 3px solid #FFC000;
+  border-radius: 10px;
+}
+
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background-color: #fff;
+  /* background-color: #FFC000; */
+  position: absolute;
+}
+.menu-btn span:before {
+  bottom: 8px;
+}
+.menu-btn span:after {
+  top: 8px;
+}
+
+.menu-btn span:hover,
+.menu-btn span:before:hover,
+.menu-btn span:after:hover{
+  background-color: #FFC000;
+}
+
+#menu-btn-check:checked ~ .menu-btn span {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0
+  ); /*メニューオープン時は真ん中の線を透明にする*/
+}
+
+
+#menu-btn-check:checked ~ .menu-btn span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+#menu-btn-check:checked ~ .menu-btn span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+#menu-btn-check {
+  display: none;
+}
+
+
+/* メニュー中身 */
+
+.menu-content {
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  top: 70px;
+  right: -100%; /*leftの値を変更してメニューを画面外へ*/
+  z-index: 80;
+  background-color: #EEEEEE;
+  /* background-color: tomato; */
+  transition: all 0.5s; /*アニメーション設定*/
+}
+
+.menu-content ul {
+  /* padding: 70px 10px 0; */
+  padding: 10px;
+  text-align: right;
+}
+.menu-content ul li {
+  border-bottom: solid 1px #ffffff;
+  width: 100%;
+  background-color: #386768;
+  list-style: none;
+}
+.menu-content ul li :hover{
+  background-color: #FFC000;
+}
+
+.menu-content ul li a {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 9px 15px 10px 0;
+  position: relative;
+}
+.menu-content ul li a::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 11px;
+  top: 16px;
+}
+
+#menu-btn-check:checked ~ .menu-content {
+  right: 0; /*メニューを画面内へ*/
+}
+
+/* ↑ここまでバーガーボタンのCSS↑ */
